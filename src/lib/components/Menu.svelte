@@ -21,7 +21,7 @@
 
 <ul
   transition:fly={{ y: -10 }}
-  class="bg-primaryColor text-accentColor relative w-full flex flex-col gap-2 justify-center items-center transition-all py-6 rounded-md drop-shadow-xl"
+  class="bg-primaryColor text-accentColor relative w-full sm:w-1/2 flex flex-col gap-2 justify-center items-center transition-all py-6 rounded-md drop-shadow-xl"
 >
   <li class="py-4" on:click={closeMenu}>
     <a href='/' on:click|preventDefault={() => scrollToElement("#navbar")} class="font-medium text-xl">Home</a>

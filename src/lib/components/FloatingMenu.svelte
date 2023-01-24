@@ -23,7 +23,7 @@
       </div>
       {#if floatingNavIsActive === true}
         <div transition:fly on:click|self={closeMenu} class="-z-50 absolute top-0 right-0 w-screen h-screen bg-black/25">
-          <nav class="mt-20 ml-5 mr-5">
+          <nav class="mt-20 ml-5 mr-5 flex h-[80vh] items-center justify-center">
             <Menu {closeMenu} />
           </nav>
         </div>

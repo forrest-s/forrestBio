@@ -18,12 +18,6 @@
   };
 </script>
 
-<button
-  class={`
-    ${type === 'primary' ? 'bg-secondaryAccentColor' : ''}
-    ${type === 'secondary' ? 'bg-secondaryColor' : ''}
-    py-3 px-7 text-textColor rounded-full uppercase border-0 font-medium
-  `}
->
+<button class='bg-secondaryColor py-3 px-7 text-textColor rounded-full uppercase border-0 font-medium'>
   <a href='/' on:click|preventDefault={() => scrollToElement("#footer")}>Contact</a>
 </button>

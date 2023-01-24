@@ -12,8 +12,8 @@
 
   // components
   import Navbar from "$lib/components/Navbar.svelte";
-  import FloatingHamburger from "../lib/components/FloatingHamburger.svelte";
-    import Icon from "@iconify/svelte";
+  import FloatingMenu from "../lib/components/FloatingMenu.svelte";
+  import Icon from "@iconify/svelte";
 
   let topNavIsActive = false;
   let floatingNavIsActive = false;
@@ -45,8 +45,8 @@
 
 <div> 
   <Navbar {topNavIsActive} {closeMenu} {handleMenu} />
-  <div class="relative md:hidden">
-    <FloatingHamburger {handleMenu} {floatingNavIsActive} {closeMenu} />
+  <div class="relative flex items-center">
+    <FloatingMenu {handleMenu} {floatingNavIsActive} {closeMenu} />
   </div>
   <div class:blur={floatingNavIsActive || topNavIsActive}>
     <slot {topNavIsActive} />
