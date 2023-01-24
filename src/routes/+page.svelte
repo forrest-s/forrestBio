@@ -27,13 +27,13 @@
 <svelte:window bind:innerWidth={width} />
 
 <!-- Header -->
-<section
+<header
   class="relative min-h-[620px] md:min-h-screen w-full bg-contain bg-no-repeat z-40"
 >
   <img
     src="https://images.unsplash.com/photo-1503435980610-a51f3ddfee50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
     class="absolute -z-[100] object-cover w-full h-full"
-    alt="An orange"
+    alt="trees background"
   />
   <div class="gutter flex flex-col justify-center items-center">
     <h1
@@ -46,9 +46,9 @@
     <p class="p-2 rounded bg-backgroundColor text-textColor text-xl md:text-xl lg:text-2xl xl:text-3xl text-center font-fraunces tracking-[0.5rem] font-black">
       i bring ideas to life through the art of coding.
     </p>
-    <div class="z-30 lg:mt-16">
+    <div class="z-30 mt-10 lg:mt-16">
       <a
-        href={"#"}
+        href={"/"}
         class={`z-30`}
         on:click|preventDefault={() => scrollToElement("#section1")}
       >
@@ -60,7 +60,7 @@
       </a>
     </div>
   </div>
-</section>
+</header>
 
 <!-- Features -->
 {#each data.features as feature (feature.title)}
@@ -74,7 +74,7 @@
 {/each}
 
 <!-- Services -->
-<div class="md:flex max-w-[1960px] mx-auto">
+<div id='section3' class="md:flex max-w-[1960px] mx-auto">
   {#each data.services as service (service.id)}
     <section id={"service-section" + service.id} class="flex-1">
       <Service {service} {width} />
@@ -82,7 +82,7 @@
   {/each}
 </div>
 
-<section>
+<section id='section4'>
   <ProjectCard projects={data.projects} />
 </section>
 

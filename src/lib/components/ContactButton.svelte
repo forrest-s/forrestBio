@@ -1,6 +1,21 @@
 <script>
   export let type;
   export let closeMenu;
+
+  const scrollToElement = (selector) => {
+    const elementTo = document.querySelector(selector);
+    if (!elementTo) return;
+
+    let position = elementTo.getBoundingClientRect().top;
+    let offset = position + window.pageYOffset;
+
+    window.scrollTo({
+      top: offset,
+      behavior: "smooth",
+    });
+
+    closeMenu()
+  };
 </script>
 
 <button
@@ -9,7 +24,6 @@
     ${type === 'secondary' ? 'bg-secondaryColor' : ''}
     py-3 px-7 text-textColor rounded-full uppercase border-0 font-medium
   `}
-  on:click={closeMenu}
 >
-  <a href={"#"}>Contact</a>
+  <a href='/' on:click|preventDefault={() => scrollToElement("#footer")}>Contact</a>
 </button>

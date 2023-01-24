@@ -51,7 +51,7 @@
   <div class:blur={floatingNavIsActive || topNavIsActive}>
     <slot {topNavIsActive} />
   </div>
-  <footer class="bg-shadowColor p-2 py-16 flex flex-col md:flex-row gap-8 justify-around items-center">
+  <footer id='footer'class="bg-shadowColor p-2 py-16 flex flex-col md:flex-row gap-8 justify-around items-center">
     <section>
       <div class="ml-6 mr-6 mb-2 text-secondaryColor font-black text-2xl md:text-4xl tracking-wide text-center">
         Forrest S

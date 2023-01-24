@@ -10,6 +10,20 @@
   export let topNavIsActive;
   export let handleMenu;
   export let closeMenu;
+
+  const scrollToElement = (selector) => {
+    const elementTo = document.querySelector(selector);
+    if (!elementTo) return;
+
+    let position = elementTo.getBoundingClientRect().top;
+    let offset = position + window.pageYOffset;
+
+    window.scrollTo({
+      top: offset,
+      behavior: "smooth",
+    });
+  };
+  
 </script>
 
 <nav
@@ -30,12 +44,12 @@
       }`}
       on:click={() => handleMenu("top")}
     >
-      <Icon icon="bytesize:menu" class={`text-white text-3xl`} />
+      <Icon icon="ri:git-branch-fill" class={`text-shadowColor text-4xl`} />
     </div>
     <ul class="hidden md:flex items-center space-x-10 text-primaryColor font-medium text-lg">
-      <li><a href="/about">About</a></li>
-      <li><a href="/knowledge">Knowledge</a></li>
-      <li><a href="/projects">Projects</a></li>
+      <li><a href="/" on:click|preventDefault={() => scrollToElement("#section2")}>About</a></li>
+      <li><a href="/" on:click|preventDefault={() => scrollToElement("#section3")}>Knowledge</a></li>
+      <li><a href="/" on:click|preventDefault={() => scrollToElement("#section4")}>Projects</a></li>
       <ContactButton type={'secondary'} />
     </ul>
   </div>

@@ -3,6 +3,20 @@
   import Icon from "@iconify/svelte";
   import ContactButton from "./ContactButton.svelte";
   export let closeMenu;
+
+  const scrollToElement = (selector) => {
+    const elementTo = document.querySelector(selector);
+    if (!elementTo) return;
+
+    let position = elementTo.getBoundingClientRect().top;
+    let offset = position + window.pageYOffset;
+
+    window.scrollTo({
+      top: offset,
+      behavior: "smooth",
+    });
+  };
+  
 </script>
 
 <ul
@@ -10,13 +24,16 @@
   class="bg-primaryColor text-accentColor relative w-full flex flex-col gap-2 justify-center items-center transition-all py-6 rounded-md drop-shadow-xl"
 >
   <li class="py-4" on:click={closeMenu}>
-    <a href={"#"} class="font-medium text-xl">About</a>
+    <a href='/' on:click|preventDefault={() => scrollToElement("#navbar")} class="font-medium text-xl">Home</a>
   </li>
   <li class="py-4" on:click={closeMenu}>
-    <a href={"#"} class="font-medium text-xl">Knowledge</a>
+    <a href='/' on:click|preventDefault={() => scrollToElement("#section2")} class="font-medium text-xl">About</a>
   </li>
   <li class="py-4" on:click={closeMenu}>
-    <a href={"#"} class="font-medium text-xl">Projects</a>
+    <a href='/' on:click|preventDefault={() => scrollToElement("#section3")} class="font-medium text-xl">Knowledge</a>
+  </li>
+  <li class="py-4" on:click={closeMenu}>
+    <a href='/' on:click|preventDefault={() => scrollToElement("#section4")} class="font-medium text-xl">Projects</a>
   </li>
   <ContactButton {closeMenu} type="primary" />
   <div on:click={closeMenu} class="absolute top-2 right-2 z-50">

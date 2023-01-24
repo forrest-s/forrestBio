@@ -19,7 +19,7 @@
       `}
         on:click={() => handleMenu("floating")}
       >
-        <Icon icon="bytesize:menu" class={`text-black text-xl`} />
+        <Icon icon="ph:git-branch-fill" class={`text-black text-xl`} />
       </div>
       {#if floatingNavIsActive === true}
         <div transition:fly on:click|self={closeMenu} class="-z-50 absolute top-0 right-0 w-screen h-screen bg-black/25">
