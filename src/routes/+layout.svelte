@@ -13,6 +13,7 @@
   // components
   import Navbar from "$lib/components/Navbar.svelte";
   import FloaingHamburger from "../lib/components/FloaingHamburger.svelte";
+    import Icon from "@iconify/svelte";
 
   let topNavIsActive = false;
   let floatingNavIsActive = false;
@@ -50,19 +51,24 @@
   <div class:blur={floatingNavIsActive || topNavIsActive}>
     <slot {topNavIsActive} />
   </div>
-  <footer  class="bg-shadowColor py-16 flex flex-col gap-8 items-center">
-    <div class="text-secondaryColor font-black text-2xl md:text-4xl tracking-wide">
-      Forrest S
-    </div>
-    <ul class="flex gap-6">
-      <li>
-        <a href="/"><img src="/images/icon-linkedin.svg" alt="linkedin" /></a>
-      </li>
-      <li>
-        <a href="/"
-          ><img src="/images/icon-github.svg" alt="github" /></a
-        >
-      </li>
-    </ul>
+  <footer class="bg-shadowColor p-2 py-16 flex flex-col md:flex-row gap-8 justify-around items-center">
+    <section>
+      <div class="ml-6 mr-6 mb-2 text-secondaryColor font-black text-2xl md:text-4xl tracking-wide text-center">
+        Forrest S
+      </div>
+      <ul class="flex justify-center items-center gap-6">
+        <li><a href="https://www.linkedin.com/in/yulerik"><Icon icon="mdi:linkedin" class={`text-secondaryColor text-4xl`} /></a></li>
+        <li><a href="https://www.github.com/forrest-s"><Icon icon="mdi:github" class={`text-secondaryColor text-4xl`} /></a></li>
+      </ul>
+    </section>
+    <form class="flex flex-col p-4 rounded gap-1 text-accentColor bg-primaryColor" action="https://formspree.io/f/xrgvbvqr" method="POST">
+      <p>Feel free to contact me for any inquires or opportunities.</p>
+      <label for="name" class="text-tertiaryColor">Name</label>
+      <input name="name" type="text" class="bg-primaryColor border-b-2 border-black" value="">
+      <label for="email" class="text-tertiaryColor">E-mail</label>
+      <input name="email" type="email" class="bg-primaryColor border-b-2 border-black" value="">
+      <label for="message" class="text-tertiaryColor">Message</label>
+      <textarea name="message" type="text" class="bg-primaryColor border-2 border-black rounded"></textarea>
+      <button type="submit" class="bg-shadowColor rounded p-1 text-center w-3/4 text-accentColor self-center mt-2 hover:bg-tertiaryColor hover:text-shadowColor font-semibold">Submit</button></form>
   </footer>
 </div>
