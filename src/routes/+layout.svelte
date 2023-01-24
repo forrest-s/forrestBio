@@ -12,7 +12,7 @@
 
   // components
   import Navbar from "$lib/components/Navbar.svelte";
-  import FloaingHamburger from "../lib/components/FloaingHamburger.svelte";
+  import FloatingHamburger from "../lib/components/FloatingHamburger.svelte";
     import Icon from "@iconify/svelte";
 
   let topNavIsActive = false;
@@ -46,7 +46,7 @@
 <div> 
   <Navbar {topNavIsActive} {closeMenu} {handleMenu} />
   <div class="relative md:hidden">
-    <FloaingHamburger {handleMenu} {floatingNavIsActive} {closeMenu} />
+    <FloatingHamburger {handleMenu} {floatingNavIsActive} {closeMenu} />
   </div>
   <div class:blur={floatingNavIsActive || topNavIsActive}>
     <slot {topNavIsActive} />

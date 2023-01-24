@@ -1,5 +1,4 @@
 export function load() {
-  const projects = {}
   const photos = {
     test: ''
   }
@@ -46,9 +45,9 @@ export function load() {
     },
   ];
 
-  const testimonials = [
+  const projects = [
     {
-      image: "/images/image-emily.jpg",
+      image: "/images/lotr-app.png",
       content:
         "We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.",
       name: "Emily R.",
@@ -56,7 +55,7 @@ export function load() {
       id: 1,
     },
     {
-      image: "/images/image-thomas.jpg",
+      image: "/images/bounty-hunter-app.png",
       content:
         "Sunnyside's enthsiasm coupled with their keen interest in our brand's success made it a satisfying and enjoyable experience.",
       name: "Thomas S.",
@@ -64,13 +63,21 @@ export function load() {
       id: 2,
     },
     {
-      image: "/images/image-jennie.jpg",
+      image: "/images/books-weve-read.png",
       content:
         "Incredible end result! Oour sales increased over 400% when we worked with Sunnyside. Highly recommended!",
       name: "Jennie F.",
       title: "Business Owner",
       id: 3,
     },
+    {
+      image: "/images/exercise-tracker.png",
+      content:
+        "Incredible end result! Oour sales increased over 400% when we worked with Sunnyside. Highly recommended!",
+      name: "Jennie F.",
+      title: "Business Owner",
+      id: 4,
+    }
   ];
 
   const gallery = [
@@ -101,11 +108,10 @@ export function load() {
   ];
 
   return {
-    projects,
     photos,
     features,
     services,
-    testimonials,
+    projects,
     gallery,
   };
 }
