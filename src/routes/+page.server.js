@@ -50,32 +50,32 @@ export function load() {
       image: "/images/lotr-app.png",
       content:
         "We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.",
-      name: "Emily R.",
-      title: "Marketing Director",
+      title: "Characters of the Lord of the Rings",
+      technologies: ['React'],
       id: 1,
     },
     {
       image: "/images/bounty-hunter-app.png",
       content:
-        "Sunnyside's enthsiasm coupled with their keen interest in our brand's success made it a satisfying and enjoyable experience.",
-      name: "Thomas S.",
-      title: "Chief Operating Officer",
+        "Exercise tracker app with authentication and login. Log in and start tracking workouts and ask questions on the forum. App utilizes React for the front-end, with react-router helping with the different routes, and Node.js/Express as the backend. MongoDB is used for the database and Mongoose helps with the schema creation and object-document mapper. Authentication is handled using tokens and encryption. App is live with heroku.",
+      title: "Bounty Hunter",
+      technologies: ['React', 'Express.js', 'Node.js'],
       id: 2,
     },
     {
       image: "/images/books-weve-read.png",
       content:
         "Incredible end result! Oour sales increased over 400% when we worked with Sunnyside. Highly recommended!",
-      name: "Jennie F.",
-      title: "Business Owner",
+      title: "Books We've Read Database",
+      technologies: ['React', 'Express.js', 'Node.js', 'MongoDB'],
       id: 3,
     },
     {
       image: "/images/exercise-tracker.png",
       content:
         "Incredible end result! Oour sales increased over 400% when we worked with Sunnyside. Highly recommended!",
-      name: "Jennie F.",
-      title: "Business Owner",
+      title: "Exercise Tracker/Forum",
+      technologies: ['React', 'Express.js', 'Node.js', 'MongoDB'],
       id: 4,
     }
   ];

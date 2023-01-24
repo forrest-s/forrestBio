@@ -32,7 +32,7 @@
     >
       <Icon icon="bytesize:menu" class={`text-white text-3xl`} />
     </div>
-    <ul class="hidden md:flex items-center space-x-10 text-white font-medium text-lg">
+    <ul class="hidden md:flex items-center space-x-10 text-primaryColor font-medium text-lg">
       <li><a href="/about">About</a></li>
       <li><a href="/knowledge">Knowledge</a></li>
       <li><a href="/projects">Projects</a></li>

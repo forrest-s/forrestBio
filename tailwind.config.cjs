@@ -39,10 +39,5 @@ module.exports = {
   plugins: [],
 }
 
-// - Very dark desaturated blue: 
-// - Very dark grayish blue: 
-// - Dark grayish blue: 
-// - Grayish blue: 
-// - White: hsl(0, 0%, 100%)
 
 

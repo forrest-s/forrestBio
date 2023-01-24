@@ -1,21 +1,21 @@
 <script>
   import RevealOnScroll from "../utils/RevealOnScroll.svelte";
-
   import ProjectContent from "./ProjectContent.svelte";
   export let projects;
 </script>
 
-<div class="gutter py-16 md:pt-16 md:pb-32 lg:pt-44 lg:pb-64 xl:pb-80 xl:pt-44">
+<section class="gutter py-16 lg:py-32 xl:py-64">
   <h3
-    class="text-center text-project-gray-blue text-lg font-black font-fraunces uppercase tracking-[0.25rem] md:py-10 md:text-2xl"
+    class="text-center text-primaryColor text-2xl font-black font-fraunces uppercase tracking-[0.25rem] md:py-10 md:text-3xl underline"
   >
-    Projects
+    Personal Ventures
   </h3>
-  <div class="md:grid lg:grid-cols-3 gap-10 max-w-[1400px] mx-auto">
+  <!-- <hr class='border-primaryColor border-2'/> -->
+  <section class="md:grid lg:grid-cols-2 gap-10 max-w-[1400px] mx-auto">
     {#each projects as project (project.id)}
       <RevealOnScroll let:isVisible>
         <ProjectContent {project} />
       </RevealOnScroll>
     {/each}
-  </div>
-</div>
+  </section>
+</section>

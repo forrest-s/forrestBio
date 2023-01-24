@@ -5,9 +5,9 @@
 
 <button
   class={`
-    ${type === 'primary' ? 'bg-project-primary-yellow' : ''}
-    ${type === 'secondary' ? 'bg-white' : ''}
-    py-3 px-7 text-project-dark-blue rounded-full uppercase border-0 font-medium
+    ${type === 'primary' ? 'bg-secondaryAccentColor' : ''}
+    ${type === 'secondary' ? 'bg-secondaryColor' : ''}
+    py-3 px-7 text-textColor rounded-full uppercase border-0 font-medium
   `}
   on:click={closeMenu}
 >
