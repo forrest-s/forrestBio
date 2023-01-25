@@ -61,14 +61,15 @@
         <li><a href="https://www.github.com/forrest-s"><Icon icon="mdi:github" class={`text-secondaryColor text-4xl`} /></a></li>
       </ul>
     </section>
-    <form class="flex flex-col p-4 rounded gap-1 text-accentColor bg-primaryColor" action="https://formspree.io/f/xrgvbvqr" method="POST">
+    <form class="flex flex-col p-4 rounded gap-1 text-accentColor bg-primaryColor" action="https://formspree.io/f/xrgvbvqr" method="POST" accept-charset='utf-8' name='simple-contact-form'>
       <p>Feel free to contact me for any inquires or opportunities.</p>
-      <label for="name" class="text-tertiaryColor">Name</label>
-      <input name="name" type="text" class="bg-primaryColor border-b-2 border-black" value="">
-      <label for="email" class="text-tertiaryColor">E-mail</label>
-      <input name="email" type="email" class="bg-primaryColor border-b-2 border-black" value="">
-      <label for="message" class="text-tertiaryColor">Message</label>
-      <textarea name="message" type="text" class="bg-primaryColor border-2 border-black rounded"></textarea>
+      <label for="full-name" class="text-tertiaryColor">Name</label>
+      <input id='full-name' name="name" type="text" class="bg-primaryColor border-b-2 border-black" value="">
+      <label for="email-address" class="text-tertiaryColor">E-mail</label>
+      <input id='email-address' type="email" class="bg-primaryColor border-b-2 border-black" name='_replyto' value="">
+      <label  for="message" class="text-tertiaryColor">Message</label>
+      <textarea id='message' name="message" type="text" class="bg-primaryColor border-2 border-black rounded"></textarea>
+      <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
       <button type="submit" class="bg-shadowColor rounded p-1 text-center w-3/4 text-accentColor self-center mt-2 hover:bg-tertiaryColor hover:text-shadowColor font-semibold">Submit</button></form>
   </footer>
 </div>

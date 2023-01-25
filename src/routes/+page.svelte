@@ -90,5 +90,3 @@
   <Gallery images={data.gallery} {width} />
 </section>
 
-<style>
-</style>
